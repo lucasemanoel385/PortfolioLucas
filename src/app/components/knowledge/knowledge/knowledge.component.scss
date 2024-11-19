@@ -43,7 +43,7 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                width: 10%;
+                width: 95px;
                 background-color: var(--background);
                 border-radius: 10px;
                 transition: var(--transition);
@@ -87,6 +87,14 @@
     @media (max-width: 1007px) {
         .container__knowledge {
             width: 90%;
+        }
+    }
+
+    @media (max-width: 781px) {
+        
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 }

@@ -168,6 +168,34 @@
             width: 80%;
         }
     }
+    
+}
+
+@media (max-width: 781px) {
+
+    :host {
+
+        height: auto;
+
+        .container__projects {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container__col1, .container__col2 {
+            height: 100%;
+        }
+
+        swiper-container {
+            width: 50%;
+        }
+
+        swiper-slide {
+            height: 100%;
+        }
+
+        
+    }
 
     
 
