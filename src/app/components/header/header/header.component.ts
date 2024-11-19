@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +9,21 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  lastScrollPosition = 0;
+  isNavbarHidden = "translateY(0)";
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+    if (currentScrollPosition > this.lastScrollPosition) {
+      this.isNavbarHidden = "translateY(-140%)";
+    } else {
+      this.isNavbarHidden = "translateY(0)";
+    }
+
+    this.lastScrollPosition = currentScrollPosition;
+  }
+
 }
+
+

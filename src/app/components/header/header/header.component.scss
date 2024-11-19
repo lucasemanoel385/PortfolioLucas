@@ -57,6 +57,7 @@
         position: fixed;
         background-color: rgb(228, 228, 228);
         z-index: 99999;
+        transition: transform 0.3s ease-in-out;
 
         nav {
             display: flex;
@@ -68,6 +69,8 @@
             }
         }
     }
+
+    
 
     .container__header {
         display: flex;
