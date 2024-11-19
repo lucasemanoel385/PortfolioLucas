@@ -1,0 +1,166 @@
+:host {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  
+    header {
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 100px;
+        padding: 5em 0;
+       
+    }
+
+    .container__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secundary-color);
+            border: 0;
+            height: 45px;
+            width: 120px;
+            border-radius: 10px;
+            color: var(--background);
+            box-shadow: 0px 3px 5px grey;
+            transition: var(--transition);
+
+            &:hover {
+                background-color: var(--primary-color);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .container__nav {
+        display: flex;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px 0px grey;
+        margin-top: 5px;
+        position: fixed;
+        background-color: rgb(228, 228, 228);
+        z-index: 99999;
+
+        nav {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+
+            a {
+                padding: 0px 10px;
+            }
+        }
+    }
+
+    .container__header {
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @keyframes teste {
+        from {
+            scale: 1;
+        }
+        to {
+            scale: 1.5;
+        }
+        
+    }
+
+    .container__header-about {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        text-align: start;
+        gap: 15px;
+
+        p {
+            font-size: 20px;
+            text-align: start;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background: var(--primary-color);
+            height: 21px;
+            border-radius: 100px;
+            ul {
+                display: flex;
+                gap: 1em;
+                li {
+                    border-radius: 10px;
+                    padding: 1px 10px;
+                    cursor: pointer;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        img {
+                            width: 35px;
+                        }
+                    }
+
+                    &:hover {
+                        animation: teste 0.3s forwards;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1007px) {
+        header {
+            flex-direction: column;
+            width: 80%;
+            padding: 50px 0;
+        }
+
+        .container__header {
+            width: 100%;
+        }
+
+        .container__nav {
+            right: 10px;
+        }
+    }
+    
+
+    /*.github {
+        background-color: rgb(141, 78, 168);
+    }
+
+    .linkedin {
+        background-color: rgb(28, 116, 189);
+    }
+
+    .gmail {
+        background-color: rgb(253, 229, 229);
+    }
+
+    .whatsapp {
+        background-color: rgb(45, 165, 45);
+    }*/
+}

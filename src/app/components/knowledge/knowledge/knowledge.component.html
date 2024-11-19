@@ -1,0 +1,11 @@
+<h2 id="knowledge">Habilidades</h2>
+<div class="container__knowledge">   
+    <ul>
+        @for (item of listIcons(); track $index) {
+            <li>
+                <img [src]="item.src" [alt]="item.alt" loading="lazy" width="48px" height="48px">
+                <p>{{item.name}}</p>
+            </li>
+        }
+    </ul>
+</div>

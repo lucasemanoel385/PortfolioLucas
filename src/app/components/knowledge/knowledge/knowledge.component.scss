@@ -1,0 +1,92 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+    h2 {
+        color: var(--primary-color);
+        font-size: 25px;
+    }
+
+    @keyframes up {
+        from {
+            top: 0px;
+        }
+        to {
+            top: -20px;
+        }
+        
+    }
+    
+    .container__knowledge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--secundary-color);
+        width: 60%;
+        padding: 1em 1em;
+        box-sizing: border-box;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 2px 5px 10px rgb(165, 165, 165);
+        transition: var(--transition);
+        
+        ul {
+            display: flex;
+            gap: 2em;
+            width: 100%;
+            justify-content: center;
+            box-sizing: border-box;
+
+            li {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 10%;
+                background-color: var(--background);
+                border-radius: 10px;
+                transition: var(--transition);
+                padding: 5px 10px;   
+                position: relative;
+
+                img {
+                    transition: var(--transition);
+                }
+                
+                p {
+                    margin: 0px;
+                    font-weight: 500;
+                }
+                
+                &:hover {
+                        width: 130px;
+
+                        img {
+                            
+                            position: relative;
+                            scale: 1.8;
+                            animation: up 0.3s ease-in-out;
+                            animation-fill-mode: forwards;
+                            
+                        }
+                }
+                
+            }
+        }
+    }
+
+    @media (max-width: 1458px) {
+
+        .container__knowledge {
+            width: 75%;
+        }
+        
+    }
+
+    @media (max-width: 1007px) {
+        .container__knowledge {
+            width: 90%;
+        }
+    }
+}
