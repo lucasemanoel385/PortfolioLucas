@@ -42,8 +42,9 @@
             li {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 flex-direction: column;
-                width: 95px;
+                width: 100px;
                 background-color: var(--background);
                 border-radius: 10px;
                 transition: var(--transition);
